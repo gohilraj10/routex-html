@@ -3,30 +3,57 @@
     background-color: rgba(0, 0, 0, 0.196);
     height: 500px;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
 }
 
-.heading-1-graduate-visa-1{
+.heading-1-graduate-visa-1 {
     display: flex !important;
     justify-content: space-between;
     align-items: center;
     margin-top: 100px !important;
 }
 
-.subheading-1-graduate-visa-1 > .text-subheadubg-1{
-        text-decoration: underline;
+@media (max-width: 1025px) {
+    .heading-1-graduate-visa-1 {
+        display: block !important;
+        margin-top: 100px !important;
         text-align: center;
+    }
+
+    .heading-1-img {
+        width: 100% !important;
+    }
+
+    .subheading-1-graduate-visa-1 {
+        width: 100% !important;
+    }
+
+    .li-media {
+        margin-left: 0;
+        padding-left: 0;
+        list-style-position: inside;
+    }
 }
 
-.subheading-1-graduate-visa-1{
+@media (max-width: 1300px) {
+    .md-margin-12 {
+        margin-left: 20px !important;
+    }
+}
+
+.subheading-1-graduate-visa-1>.text-subheadubg-1 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.subheading-1-graduate-visa-1 {
     width: 55%;
 }
 
-.heading-1-img{
-    width:45%;
+.heading-1-img {
+    width: 45%;
 }
 
-.list-spaacing{
+.list-spaacing {
     margin-top: 10px;
 }
-
