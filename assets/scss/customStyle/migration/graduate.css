@@ -69,3 +69,66 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
+.graducation-cap-icon{
+    color: #0974A3F0 !important;
+    margin-right: 5px;
+    font-size: 28px;
+}
+
+.study-basics-des{
+    margin-left: 43px;
+    margin-top: 13px;
+}
+
+.gap-btw-study-basics{
+    margin:20px 0px;
+}
+
+.a-tag-border-right {
+    border-right: 1px solid gray !important;
+    padding-right: 15px;
+    margin: 0 15px;
+}
+
+/* Remove right border on the last item */
+.a-tag-border-right:last-child {
+    border-right: none !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .a-tag-border-right {
+        margin: 10px 5px; /* Adjust margin for smaller screens */
+        border-right: none !important; /* Remove border for smaller screens */
+        padding-right: 0; /* Remove padding for smaller screens */
+    }
+    .d-flex {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+}
+
+
+.gap-btw-list{
+    margin:40px auto;
+}
+
+.custom-card {
+    background-color: #f1eeee; /* Light pink background */
+    text-align: center;       /* Center the text */
+    padding: 20px;            /* Add padding inside the card */
+    border: none;             /* Remove default borders */
+  }
+
+  .custom-card h5 {
+    font-weight: bold;        /* Bold headings */
+  }
+
+  .text-justify-custom {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+  }
+
+  .bottom-m-100{
+    margin-bottom: 100px !important;
+  }
