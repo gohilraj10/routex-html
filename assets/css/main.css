@@ -281,14 +281,14 @@ h6 {
   --rr-common-black: #000000;
   --rr-common-placeholder: #4A5764;
   --rr-body-primary: #fff;
-  --rr-theme-primary: #83CD20;
+  --rr-theme-primary: #0987c3;
   --rr-theme-secondary: #07CBEB;
-  --rr-heading-primary: #034833;
+  --rr-heading-primary:  #0D1F32;
   --rr-text-body: #727272;
   --rr-text-primary: #000;
   --rr-shadow-primary: 0px 30px 60px 0px rgba(0, 15, 32, 0.1);
   --rr-background-gray: #F1F5EB;
-  --rr-background-dark-green: #034833;
+  --rr-background-dark-green: #19416b;
   --rr-border-primary: 1px solid #E3DBD8;
   /**
   @font weight declaration

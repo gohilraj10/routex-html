@@ -1,17 +1,20 @@
 <?php
 
-class ContactForm {
+class ContactForm
+{
     private $recipient;
     private $fromName;
     private $fromEmail;
 
-    public function __construct($recipient, $fromName, $fromEmail) {
+    public function __construct($recipient, $fromName, $fromEmail)
+    {
         $this->recipient = $recipient;
         $this->fromName = $fromName;
         $this->fromEmail = $fromEmail;
     }
 
-    public function sendEmail($name, $email, $phone, $subject, $message) {
+    public function sendEmail($name, $email, $phone, $subject, $message)
+    {
         $email_content = $this->buildEmailContent($name, $email, $phone, $subject, $message);
         $email_headers = $this->buildEmailHeaders();
 
@@ -24,7 +27,8 @@ class ContactForm {
         }
     }
 
-    private function buildEmailContent($name, $email, $phone, $subject, $message) {
+    private function buildEmailContent($name, $email, $phone, $subject, $message)
+    {
         $content = "";
         $fields = array(
             "Name" => $name,
@@ -41,7 +45,8 @@ class ContactForm {
         return $content;
     }
 
-    private function buildEmailHeaders() {
+    private function buildEmailHeaders()
+    {
         $headers = "From: {$this->fromName} <{$this->fromEmail}>\r\n";
         $headers .= "Reply-To: {$this->fromEmail}\r\n";
         $headers .= "X-Mailer: PHP/" . phpversion();
@@ -57,7 +62,7 @@ $contactForm = new ContactForm($recipient, $fromName, $fromEmail);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = strip_tags(trim($_POST["name"]));
-    $name = str_replace(array("\r","\n"),array(" "," "),$name);
+    $name = str_replace(array("\r", "\n"), array(" ", " "), $name);
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $phone = trim($_POST["phone"]);
     $subject = trim($_POST["subject"]);
