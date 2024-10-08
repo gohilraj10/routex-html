@@ -1,10 +1,10 @@
-.graduate-visa-1-img-heading {
+/* .graduate-visa-1-img-heading {
     background: url('../../../imgs/migration-page/graduate-visa-1.jpg');
-    background-color: rgba(0, 0, 0, 0.196);
+    background-color: #0D1F32;
     height: 500px;
     background-size: cover;
     background-position: center;
-}
+} */
 
 .heading-1-graduate-visa-1 {
     display: flex !important;
@@ -131,4 +131,16 @@
 
   .bottom-m-100{
     margin-bottom: 100px !important;
+  }
+
+  .bg-primary-custom{
+    background-color: #0988c324;
+  }
+
+  .h2-custom{   
+    font-size: 50px !important;
+    line-height: 60px !important;
+    font-weight: 700 !important;
+    color: white !important;
+    z-index: 11111111 !important;
   }
