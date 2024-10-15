@@ -663,26 +663,26 @@
         lastNobullet();
     });
 
-    $('#contact-us__form').submit(function(event) {
-        event.preventDefault();
-        var form = $(this);
-        $('.loading-form').show();
+    // $('#contact-us__form').submit(function(event) {
+    //     event.preventDefault();
+    //     var form = $(this);
+    //     $('.loading-form').show();
 
-        setTimeout(function() { 
-            $.ajax({
-            type: form.attr('method'),
-            url: form.attr('action'),
-            data: form.serialize()
-            }).done(function(data) {
-                $('.loading-form').hide();
-                $('.contact-us__form').append('<p class="success-message mt-3 mb-0">Your message has been sent successfully.</p>');
-            }).fail(function(data) {
-                $('.loading-form').hide();
-                $('.contact-us__form').append('<p class="error-message mt-3 mb-0">Something went wrong. Please try again later.</p>');
+    //     setTimeout(function() { 
+    //         $.ajax({
+    //         type: form.attr('method'),
+    //         url: form.attr('action'),
+    //         data: form.serialize()
+    //         }).done(function(data) {
+    //             $('.loading-form').hide();
+    //             $('.contact-us__form').append('<p class="success-message mt-3 mb-0">Your message has been sent successfully.</p>');
+    //         }).fail(function(data) {
+    //             $('.loading-form').hide();
+    //             $('.contact-us__form').append('<p class="error-message mt-3 mb-0">Something went wrong. Please try again later.</p>');
 
-            });
-        }, 1000);
-      });
+    //         });
+    //     }, 1000);
+    //   });
 
     $('#showlogin').on('click', function () {
         $('#checkout-login').slideToggle(400);

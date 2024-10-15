@@ -120,6 +120,11 @@
     border: none;             /* Remove default borders */
   }
 
+  .custom-card:hover{
+    background-color: #0b97d880 ;
+    transition: 0.8s;
+  }
+
   .custom-card h5 {
     font-weight: bold;        /* Bold headings */
   }
@@ -143,4 +148,46 @@
     font-weight: 700 !important;
     color: white !important;
     z-index: 11111111 !important;
+  }
+
+  .bg-primary-custom-dark{
+    background-color: #0988c3f2;
+  }
+
+
+  .loading-spinner {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px !important;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Hides the spinner by default */
+  .loading-spinner.hidden {
+    display: none;
+  }
+
+  /* Disables the button */
+  .button-disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+
+  .svg-custom-style{
+    fill: #0987c3e0 !important;
   }

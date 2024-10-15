@@ -29,6 +29,10 @@
     <link rel="stylesheet" href="assets/css/vendor/spacing.css" />
     <link rel="stylesheet" href="assets/css/vendor/custom-font.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/scss/customStyle/migration/graduate.css"
+    />
   </head>
 
   <body>
@@ -149,11 +153,11 @@
                       <ul>
                         <!-- home navbar -->
                         <li class="active">
-                          <a href="index-3.html">Home</a>
+                          <a href="index.html">Home</a>
                           <!-- <ul class="submenu"> -->
                           <!-- <li><a href="index.html">Home 1</a></li>
-                                                <li><a href="index-2.html">Home 2</a></li> -->
-                          <!-- <li><a href="index-3.html">Home 3</a></li> -->
+                                                <li><a href="index.html">Home 2</a></li> -->
+                          <!-- <li><a href="index.html">Home 3</a></li> -->
                           <!-- </ul> -->
                         </li>
                         <!-- migratiion navbar  -->
@@ -811,7 +815,9 @@
                   </div>
                 </div>
                 <div class="about-us-2__wrapper-media d-flex">
-                  <div class="about-us-2__wrapper-media__counter">
+                  <div
+                    class="about-us-2__wrapper-media__counter bg-primary-custom-dark"
+                  >
                     <h3 class="about-us-2__wrapper-media__counter-title">
                       <span class="odometer" data-count="32">0</span>+
                     </h3>
@@ -925,7 +931,7 @@
 
       <!--service section-->
       <section
-        class="service__area custom-width p-relative border overflow-hidden gray-bg"
+        class="service__area custom-width p-relative border overflow-hidden gray-bg bg-primary-custom"
       >
         <div class="service__bg-wrap">
           <div
@@ -1445,7 +1451,7 @@
       </section>
 
       <!--coaching2-section-->
-      <section class="custom-width border bg-gray">
+      <section class="custom-width border bg-primary-custom">
         <div class="coaching2__area section-space-top pb-306">
           <div class="container">
             <div class="row mb-minus-30">
@@ -2613,7 +2619,7 @@
 
       <!--process overview-->
       <section
-        class="overview__area custom-width section-space bottom p-relative border overflow-hidden gray-bg"
+        class="overview__area custom-width section-space bottom p-relative border overflow-hidden bg-primary-custom"
       >
         <div
           class="overview__bg-img"
@@ -3120,7 +3126,7 @@
 
       <!--contact-section-->
       <section
-        class="contact-us__area border bg-gray section-space-top pb-337 custom-width overflow-hidden"
+        class="contact-us__area border bg-gray bg-primary-custom section-space-top pb-337 custom-width overflow-hidden"
       >
         <div class="container">
           <div class="row align-items-center">
@@ -3181,10 +3187,27 @@
                   <form
                     class="contact-us__form"
                     id="contact-us__form"
-                    method="POST"
-                    action="./mail.php"
+                    action="javascript:void(0);"
                   >
                     <div class="row">
+                      <div class="col-sm-12">
+                        <div
+                          class="contact-us__input wow fadeInLeft animated"
+                          data-wow-delay=".6s"
+                        >
+                          <span>Your Name</span>
+                          <input
+                            name="fullName"
+                            id="fullName"
+                            type="text"
+                            placeholder="Your Name"
+                            required
+                          />
+                          <div class="icon">
+                            <i class="fa-solid fa-user"></i>
+                          </div>
+                        </div>
+                      </div>
                       <div class="col-sm-6">
                         <div
                           class="contact-us__input wow fadeInLeft animated"
@@ -3196,6 +3219,7 @@
                             id="email"
                             type="email"
                             placeholder="Your Email"
+                            required
                           />
                           <div class="icon">
                             <i class="fa-solid fa-paper-plane"></i>
@@ -3213,41 +3237,27 @@
                             id="phone"
                             type="tel"
                             placeholder="Your Phone"
+                            required
                           />
                           <div class="icon icon-2">
                             <i class="fa-solid fa-phone"></i>
                           </div>
                         </div>
                       </div>
+
                       <div class="col-sm-12">
-                        <div
-                          class="contact-us__input wow fadeInLeft animated"
-                          data-wow-delay=".6s"
-                        >
-                          <span>Your Address</span>
-                          <input
-                            name="address"
-                            id="address"
-                            type="email"
-                            placeholder="Your Address"
-                          />
-                          <div class="icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
                         <div
                           class="contact-us__textarea wow fadeInLeft animated"
                           data-wow-delay=".7s"
                         >
                           <span>Message</span>
                           <textarea
-                            name="textarea"
-                            id="textarea"
+                            name="message"
+                            id="message"
                             cols="30"
                             rows="10"
                             placeholder="Write Message.."
+                            required
                           ></textarea>
                           <div class="icon">
                             <i class="fa-solid fa-envelope"></i>
@@ -3255,10 +3265,20 @@
                         </div>
                       </div>
                       <div class="col-12">
-                        <button
+                        <!-- <button
                           type="submit"
                           class="contact-btn mt-30 wow fadeInLeft animated"
                           data-wow-delay=".8s"
+                          onclick="sendEmail()"
+                        >
+                          Send Message
+                        </button> -->
+                        <button
+                          type="submit"
+                          id="sendMessageButton"
+                          class="contact-btn mt-30 wow fadeInLeft animated"
+                          data-wow-delay=".8s"
+                          onclick="sendEmail()"
                         >
                           Send Message
                         </button>
@@ -3822,7 +3842,7 @@
                 <div class="footer__link">
                   <ul>
                     <li>
-                      <a href="index-3.html"
+                      <a href="index.html"
                         ><i class="fa-solid fa-angle-right"></i>Latest News</a
                       >
                     </li>
@@ -3980,6 +4000,66 @@
       </section>
     </footer>
     <!-- Footer area end -->
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("8VGQA5eAo8tPuNztJ"); // Add your public key here
+      })();
+    </script>
+
+    <script type="text/javascript">
+      function sendEmail() {
+        event.preventDefault();
+
+        // Show loading effect
+        var sendButton = document.getElementById("sendMessageButton");
+        sendButton.innerHTML = `<span class="loading-spinner"></span> Sending...`;
+        sendButton.classList.add("button-disabled");
+
+        // $(".loading-form").show();
+
+        // Collect form data
+        const fullName = document.getElementById("fullName").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
+        // Create the email template parameters
+        const templateParams = {
+          fullName: fullName,
+          email: email,
+          phone: phone,
+          message: message,
+        };
+
+        emailjs
+          .send("service_heo3klh", "template_m8y596o", templateParams)
+          .then(
+            function (response) {
+              // Success: Show success message, reset the form, and stop loading
+              sendButton.innerHTML = "Send Message";
+              sendButton.classList.remove("button-disabled");
+              $(".contact-us__form").append(
+                '<p class="success-message mt-3 mb-0">Your message has been sent successfully.</p>'
+              );
+              document.getElementById("contact-us__form").reset();
+            },
+            function (error) {
+              // Error: Show error message and stop loading
+              sendButton.innerHTML = "Send Message";
+              sendButton.classList.remove("button-disabled");
+              $(".contact-us__form").append(
+                '<p class="error-message mt-3 mb-0">Something went wrong. Please try again later.</p>'
+              );
+            }
+          );
+      }
+    </script>
 
     <!-- JS here -->
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
