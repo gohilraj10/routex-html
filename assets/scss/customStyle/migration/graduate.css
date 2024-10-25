@@ -1,10 +1,7 @@
-/* .graduate-visa-1-img-heading {
-    background: url('../../../imgs/migration-page/graduate-visa-1.jpg');
-    background-color: #0D1F32;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-} */
+.graduate-visa-1-img-heading {
+  color: #80d7ff;
+  z-index: 111111 !important;
+}
 
 .heading-1-graduate-visa-1 {
     display: flex !important;
