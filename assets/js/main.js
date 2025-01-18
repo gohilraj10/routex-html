@@ -777,3 +777,10 @@ pricingValues.each(function () {
     pricingValue.html(newValue);
 });
 }
+
+// current year dom content 
+document.addEventListener("DOMContentLoaded", function () {
+    const yearElement = document.getElementById("currentYear");
+    const currentYear = new Date().getFullYear();
+    yearElement.textContent = currentYear;
+  });
